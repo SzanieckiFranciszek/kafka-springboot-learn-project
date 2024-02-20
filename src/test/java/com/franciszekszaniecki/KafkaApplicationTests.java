@@ -1,10 +1,10 @@
-package com.franciszekszaniecki.kafkaspringbootlearnproject;
+package com.franciszekszaniecki;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class KafkaSpringbootLearnProjectApplicationTests {
+class KafkaApplicationTests {
 
     @Test
     void contextLoads() {
