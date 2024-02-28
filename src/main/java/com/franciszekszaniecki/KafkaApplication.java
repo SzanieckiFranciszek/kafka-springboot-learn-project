@@ -14,9 +14,13 @@ public class KafkaApplication {
     }
 
     @Bean
-    CommandLineRunner commandLineRunner(KafkaTemplate<String,String> kafkaTemplate){
+    CommandLineRunner commandLineRunner(KafkaTemplate<String, String> kafkaTemplate) {
+        System.out.printf("Sending messages to kafka topic caffeshop\n");
         return args -> {
-          kafkaTemplate.send("caffeshop","brazil-caffe1");
+            for (int i = 0; i < 100; i++) {
+                System.out.printf("Sending message %d\n", i);
+                kafkaTemplate.send("coffe", "Hello Kafka " + i);
+            }
         };
     }
 
